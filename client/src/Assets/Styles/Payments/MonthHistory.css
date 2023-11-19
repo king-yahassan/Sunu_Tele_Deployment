@@ -1,0 +1,42 @@
+.resume-payment{
+    background: linear-gradient(180deg, #709CA7 0%, rgba(112, 156, 167, 0.00) 100%);
+    padding: 0.2%;
+    margin: 0 30%;
+    width: 40%;
+    text-align:  center;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 2px 2px 10px #fff ;
+}
+
+.month-history ul{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    width: 95%;
+    margin: 1% 2.5%  ;
+    height: 50px;
+    padding: 1.2%;
+    border-radius: 5px;
+}
+
+.title{
+    background-color: #fff;
+}
+
+.value{
+    background: linear-gradient(180deg, #fff 5.53%, rgba(255, 255, 255, 0.17) 99.98%, rgb(255, 255, 255) 79.99%,  #137C8B 100%);
+
+}
+.month-history ul li{
+    width: 14%;
+}
+
+.separation{
+    /* color: #fff; */
+    background-color: #344D59;
+    text-align: center;
+    /* background: linear-gradient(180deg, #fff 5.53%, rgba(255, 255, 255, 0.17) 99.98%, rgb(255, 255, 255) 79.99%,  #137C8B 100%); */
+
+}

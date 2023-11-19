@@ -1,0 +1,195 @@
+/* Home Page Style */
+
+/* About us style */
+.home-page {
+    background: #344D59;
+
+
+    text-align: center;
+    font-family: Source Serif Pro;
+    font-style: italic;
+    color: #fff;
+
+}
+
+/* .aboutUs-home {
+position: absolute;
+}
+.compatibility-home{
+    position: relative;
+} */
+
+/* End about us's style */
+
+/* Compta Style */
+.solde {
+    padding: 2%;
+
+    font-size: 20px;
+    text-align: center;
+    font-family: Source Serif Pro;
+    font-style: italic;
+}
+
+.solde .sum {
+    min-width: 50%;
+    margin: -5% 20%;
+    height: 177px;
+    flex-shrink: 0;
+    
+
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px #fff;
+    background: linear-gradient(to bottom right, #137C8B 0%,rgba(19, 124, 139, 0.00) 80%) bottom right / 50% 50% no-repeat,
+                linear-gradient(to bottom left,#137C8B 0%,rgba(19, 124, 139, 0.00) 80%) bottom left / 50% 50% no-repeat,
+                linear-gradient(to top left,#137C8B 0%,rgba(19, 124, 139, 0.00) 80%) top left / 50% 50% no-repeat,
+                linear-gradient(to top right,#137C8B 0%, rgba(19, 124, 139, 0.00) 80%) top right / 50% 50% no-repeat;
+
+
+}
+.solde .solde-title{
+    width: 30%;
+    margin: 0 35%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px white;
+}
+.solde .sum h2{
+
+    padding: 30px 0;
+    font-size: 110px;
+    font-weight: 700;
+}
+/* .solde p{
+    width: 15%;
+    margin: -2% 33%;
+    
+} */
+.subcribers-compta{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    width: 70%;
+    margin: 0 15%;
+
+}
+.subcribers-compta .compta-details{
+    width: 30%;
+    height: 168px;
+    flex-shrink: 0;
+
+    border-radius: 15px;
+    background: linear-gradient(180deg, #709CA7 0%, rgba(112, 156, 167, 0.00) 100%);
+}
+.subcribers-compta .compta-details h1{
+    font-size: 300%;
+    line-height: 1px;
+
+}
+.subcribers-compta .compta-details p{
+    width: 70%;
+    margin: 0 15%;
+}
+
+/* payer subscriber */
+
+.paid-subscribers{
+    box-shadow: 2px 2px 10px #14FF00;
+
+}
+.paid-subscribers h1{
+    color: #14FF00;
+
+}
+.paid-subscribers .link-compta{
+    color: #14FF00;
+
+}
+/* payer subscriber */
+
+
+/* Unpaid subscriber */
+.unpaid-subscribers{
+    box-shadow: 2px 2px 10px #FAFF00;
+
+}
+.unpaid-subscribers h1{
+    color: #FAFF00;
+
+}
+.unpaid-subscribers .link-compta{
+    color: #FAFF00;
+
+}
+/* Unpaid subscriber */
+
+
+/* invalid subscriber */
+.invalid-subscribers{
+    box-shadow: 2px 2px 10px #F00;
+
+}
+.invalid-subscribers h1{
+    color: #F00;
+
+}
+.invalid-subscribers .link-compta{
+    color: #F00;
+
+}
+/* Unpaid subscriber */
+
+/* End Compta Style */
+
+
+/* Start Cartography's Style */
+.cartography-home{
+    width: 90%;
+    margin: 12% 5%;
+}
+
+.cartography-home .cartography-title{
+    width: 40%;
+    margin: 5% 31%;
+    font-size: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px white;
+    padding: 1%;
+
+}
+.cartography-home img{
+    width: 45%;
+    height: 600px;
+    margin: 2.5% ;
+    border-radius: 15px;
+}
+
+/* Ended Cartography's Style */
+
+.imgs-home  {
+    width: 80%;
+    margin: 10%;
+    justify-content: space-around;
+}
+.imgs-home img {
+    width: 23%;
+    margin: 1%;
+}
+.imgs-home .big-logo-home {
+    width: 18%;
+}
+
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #137C8B;
+}
+footer img{
+    width: 3%;
+}
+/* Footer */

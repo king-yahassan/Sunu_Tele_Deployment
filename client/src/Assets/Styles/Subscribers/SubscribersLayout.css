@@ -1,0 +1,250 @@
+body{
+    background: #344D59;
+}
+.subscriber-main-layout{
+    display: flex;
+
+}
+.search{}
+/* Start sidebar's style */
+.sidebar-subscriber{
+    width: 22%;
+    min-height: 750px;
+    position: fixed;
+    flex-shrink: 0;
+    position: fixed;
+    top: 1px;
+    background: linear-gradient(180deg, #137C8B 67.53%, rgba(255, 255, 255, 0.17) 99.98%, rgba(217, 217, 217, 0.00) 99.99%, rgba(217, 217, 217, 0.00) 100%);
+}
+.logo-sidebar {
+    position: fixed;
+    padding: 6%;
+
+}
+.logo-sidebar h1 {
+    color: #fff;
+    font-family: Source Serif Pro;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+.logo-sidebar h1  img{
+    width: 40%;
+}
+
+/* sidebar proprement dit */
+.sidebar-subscriber .navigation-sidebar ul{
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    top: 30%;
+}
+.sidebar-subscriber .navigation-sidebar ul li{
+    margin: 10% 0;
+    width: 240px;
+    height: 40px;
+    padding: 3% 10%;
+}
+
+.sidebar-subscriber .navigation-sidebar ul li .link-subscribers {
+    
+
+    /* text-decoration: none; */
+    /* color: #fff; */
+    width: 100%;
+    padding: 2%;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#new-subscriber{
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #fff;
+    color: #000;
+    /* width: 100%; */
+    padding: 4% 12%;
+    position: relative;
+    top: 10px;
+    border-radius: 3px;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+.sidebar-subscriber .navigation-sidebar ul li button{
+    background: none;
+    border: none;
+    color: #fff;
+}
+.sidebar-subscriber .navigation-sidebar ul li .active-button-subscriber-payer{
+    padding: 5%  0;
+    width: 100%;
+    color: #fff;
+    border-radius: 1px;
+    background-color: #15ff0086;
+    box-shadow: 2px 2px 5px #14FF00;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+.sidebar-subscriber .navigation-sidebar ul li .active-button-subscriber-unpaid{
+    padding: 5%  0;
+    width: 100%;
+    color: #fff;
+    border-radius: 1px;
+    background: #fbff0081;
+    box-shadow: 2px 2px 5px #FAFF00;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+.sidebar-subscriber .navigation-sidebar ul li .active-button-subscriber-invalid{
+    padding: 5%  0;
+    width: 100%;
+    color: #fff;
+    border-radius: 1px;
+    background: rgba(255, 0, 0, 0.501);
+    box-shadow: 2px 2px 5px #F00;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+.sidebar-subscriber .navigation-sidebar ul li .active-button-subscriber-allSubscribers{
+    padding: 5%  0;
+    width: 100%;
+    color: #fff;
+    border-radius: 1px;
+    background: #ffffff82;
+    box-shadow: 6px 1px 10px #fff;
+    font-family: Source Serif Pro;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+
+
+.sidebar-subscriber .navigation-sidebar ul .abonne-payer:hover{
+    padding: 1%;
+    width: 90%;
+    color: #14FF00;
+    background-color: #15ff0086;
+    box-shadow: 2px 2px 5px #14FF00;
+}
+.sidebar-subscriber .navigation-sidebar ul .abonne-unpaid:hover{
+    padding: 1%;
+    width: 90%;
+    color: #FAFF00;
+    background: #fbff0081;
+    box-shadow: 2px 2px 5px #FAFF00;
+}
+
+.sidebar-subscriber .navigation-sidebar ul .abonne-invalid:hover{
+    padding: 1%;
+    width: 90%;
+    color: #F00;
+    background: rgba(255, 0, 0, 0.501);
+    box-shadow: 2px 2px 5px #F00;
+    border: solid 1px;
+}
+
+
+.sidebar-subscriber .navigation-sidebar ul .allSubscribers:hover{
+    padding: 1%;
+    width: 90%;
+    color: #fff;
+    background: #ffffff82;
+    box-shadow: 6px 1px 10px #fff;
+}
+/* End sidebar's style */
+
+.search_{
+    position: fixed;
+    margin-top: -20px;
+    z-index: 100;
+    
+}
+
+/* Start main-layout-subscribers-details */
+
+
+.subscribers_details{
+    display: flex;
+    width: 77%;
+    height: 22%;
+    position: fixed;
+    top: 9.9%;
+    left: 22.5%;
+    background-color: #344D59;
+    z-index: 100;
+}
+
+.main-layout-subscribers-details{
+    display: flex;
+    width: 23%;
+    color: #fff;
+    height: 90%;
+    text-align: center;
+    margin: 1.5% 0 0 1.5% ;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #709CA7 0%, rgba(112, 156, 167, 0.00) 100%);
+}
+.subscribers-nmbr-desc{
+}
+.vertical-line {
+    width: 10px; 
+    height: 100%; 
+    border-radius: 15px;
+}
+.vertical-line-paid {
+
+    background-color: #14FF00; 
+}
+.vertical-line-unpaid {
+
+    background-color: #FAFF00; 
+}
+.vertical-line-invalid {
+
+    background-color: #F00; 
+}
+.vertical-line-list {
+
+    background-color: #fff; 
+}
+
+#paid-nmbr {
+
+    color: #14FF00; 
+}
+#unpaid-nmbr {
+
+    color: #FAFF00; 
+}
+#invalid-nmbr {
+
+    color: #F00; 
+}
+#list-nmbr {
+
+    color: #fff; 
+}
+/* End main-layout-subscribers-details */
+
+/* Start styles's Lists of different type of subscribers */
+.members{
+    width: 75%;
+    margin: 18% 23.5%;
+}
+
+
+/* end : Lists of different type of subscribers */

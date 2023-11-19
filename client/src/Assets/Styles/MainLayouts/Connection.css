@@ -1,0 +1,157 @@
+/* Styles SignIn and SignUp layout */
+
+.main-content-form{
+    position: absolute;
+    width: 100%;
+    height: 720px;
+    background: #344D59;
+
+    
+}
+.container-form{
+    width: 80%;
+    height: 550px;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 5.5% 10%;
+
+    background: linear-gradient(180deg, #137C8B 67.53%, rgba(255, 255, 255, 0.168056) 99.98%, rgba(217, 217, 217, 0) 99.99%, rgba(217, 217, 217, 0) 100%);
+    border: 1px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 55px;
+    border: none;
+
+}
+
+.logo-form img{
+    position: absolute;
+    left: 45%;
+    top : 0.5%
+}
+
+.form-connection{
+    position: absolute ;
+    display: flex;
+    top:20%
+    
+}
+.form-connection form{
+    position: absolute;
+    left : 8px ;
+}
+
+input{
+    border : none ;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 5px -10px 5px rgba(0, 0, 0, 0.2); /* x, y, flou, couleur */
+    
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+
+label{
+    margin: 0 2% ;
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-form-connection{
+    width: 60%;
+    height: 70px;
+    border: none;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); /* x, y, flou, couleur */
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+.btn-form-connection:hover{
+    background: #137C8B;
+}
+
+.signup{
+    width: 354px;
+    height: 387px;
+    border-radius: 15px;
+    background: #344D59;
+    position: absolute;
+    left: 770px;
+
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/* Start Specifically style of SignIn's layout */
+
+.signIn .input{
+    width: 414px;
+    height: 60px;
+    position: relative;
+    left: 70%;
+}
+.signIn label{
+    width: 414px;
+    height: 60px;
+    position: relative;
+    left: 70%;
+}
+
+#btn-signin{
+    margin : 10% 0 0 90%  ;
+    position: relative;
+}
+
+/* End Specifically style of SignIn's layout */
+
+
+
+/* Start Specifically style of SignUp's layout */
+
+.signUp{
+    left: 26%;
+    top: 12%;
+}
+.signUp .input{
+    width: 414px;
+    height: 50px;
+
+}
+
+.signUp select{
+    border-radius: 15px ;
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-size: 20px;
+    margin: 0.5% 0;
+    line-height: 40px;
+    
+}
+.btn-signUp{
+    margin: 4% 20%;
+}
+
+/* End Specifically style of SignUp's layout */

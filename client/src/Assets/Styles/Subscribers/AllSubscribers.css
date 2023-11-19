@@ -1,0 +1,107 @@
+
+/* Styles of components AllSubscriber, Payer and Unpaid subscribers */
+/* start style all-subscribers-elements */
+
+.all-subscribers .search{
+    position :fixed ;
+    top: 30%;
+    left: 23.5%;
+}
+.all-subscribers-elements .Subscribers{
+    width: 100%;
+    text-align: center;
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+}
+.all-subscribers-elements .Subscribers  .barnav {
+    width: 75%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(360deg, #137C8B 30%, rgba(255, 255, 255, 0) 100%);
+    padding: 1% ;
+    border-radius: 5px;
+    position: fixed;
+    top: 38% ;
+    z-index: 100;
+
+}
+.all-subscribers-elements .Subscribers .mini-navbar-subscribers {
+    text-align: center;
+    width: 64%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.25%;
+    margin: 0.5%;
+    border-radius: 5px;
+}
+.all-subscribers-elements .Subscribers .mini-navbar-subscribers li {
+    width: 16.5%;
+}
+
+.all-subscribers-elements .Subscribers  .barnav p {
+    width: 26%;
+    font-size: 18px;
+    margin-top: 0.5% ;
+}
+.all-subscribers-elements .Subscribers .Subscribers-items{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0 1% ;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #709CA7;
+    position: relative;
+    top : 70px ;
+}
+.all-subscribers-elements .Subscribers .Subscribers-items .Subscribers-items-wrapper{
+    text-align: center;
+    width: 68%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.25%;
+    margin: 0.5%;
+    border-radius: 5px;
+
+
+}
+.all-subscribers-elements .Subscribers .Subscribers-items .Subscribers-items-wrapper p{ 
+    font-size: 16px;
+    width: 16.5%;
+}
+
+.Subscribers-items-details{
+    /* width: 13%; */
+    color: #000;
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.all-subscribers-elements .Subscribers .actions {
+    margin-left: 10%;
+}
+.all-subscribers-elements .Subscribers .actions  .btn-action img {
+    /* margin-left: 70px; */
+    width: 15%;
+    margin:  4%;
+}
+
+#icon-delete{
+    width: 16%;
+    margin:  4%;
+}
+/* End style all-subscribers-elements */
+
+
+/* Start Style's layout Payer and Unpaid Subscribers */
+.btn-action-payer-unpaid-subscribers img{
+    width: 70%;
+    margin: 13% 250%;
+}

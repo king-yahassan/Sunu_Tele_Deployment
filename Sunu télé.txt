@@ -1,0 +1,89 @@
+Modèles :
+- User: pseudo, email, password, role
+- Subscriber: nom, prénom, adresse, téléphone, email, statut, idUser, pseudoUser
+- Payment: idSubscriber, nom, prénom, période, validateDate, date de paiement, nombre de mois payés
+
+Contrôleurs :
+
+Payment :
+- Créer un paiement pour un abonné donné
+- Gérer la validité du paiement
+- Gérer le montant total de l'argent (peut être effectué côté backend ou frontend)
+- Récupérer tous les paiements et les montants associés
+- Marquer le statut d'un paiement comme "payé" si la validité est en cours (en comparant la date actuelle avec la date de validité)
+- Ajouter le paiement à l'historique du mois et de l'abonné
+- Valider un paiement en créant une nouvelle requête de paiement avec les informations : nom, date, montant, durée de validité et nombre de mois payés, et enregistrer l'administrateur qui a validé le paiement
+
+Historiques :
+- Récupérer les informations des mois et des paiements pour l'administrateur connecté (utiliser adminSubscribeId)
+- Créer une API pour récupérer spécifiquement l'historique du mois et de l'abonné, ou bien récupérer les APIs contenant les informations et les gérer côté frontend
+
+Essayons de gérer l'historique en frontend pour le moment, et si nous rencontrons des problèmes, nous pourrons envisager de le gérer côté backend par la suite. Cela permettra de ne pas avoir besoin de concevoir des APIs supplémentaires pour l'instant.
+
+Le choix entre réaliser cette fonctionnalité côté backend ou côté frontend dépend de plusieurs facteurs, notamment la complexité des données à filtrer, les performances souhaitées, la sécurité, et le degré de flexibilité requis dans la gestion de l'historique.
+
+Voici deux approches que vous pouvez envisager :
+
+1. Côté Backend (en créant des APIs dédiées) :
+   - Concevez des APIs dédiées pour récupérer l'historique de chaque abonné et de chaque mois.
+   - Les APIs peuvent effectuer les requêtes nécessaires à la base de données pour filtrer et récupérer les informations spécifiques pour chaque abonné et mois.
+   - Cette approche offre un meilleur contrôle sur les données et permet de protéger certaines informations sensibles si nécessaire.
+   - Vous pouvez concevoir les APIs pour fournir exactement les informations dont vous avez besoin, réduisant ainsi la quantité de données transférées entre le serveur et le client.
+   - Vous pouvez également mettre en cache les données fréquemment consultées pour améliorer les performances.
+
+2. Côté Frontend (en utilisant l'API Payment existante) :
+   - Utilisez l'API Payment existante qui contient les informations nécessaires pour chaque paiement.
+   - Effectuez des requêtes à l'API Payment en spécifiant des paramètres de filtrage pour récupérer les informations spécifiques pour chaque abonné et mois.
+   - Filtrer les données côté frontend en utilisant JavaScript pour former l'historique pour chaque abonné et mois.
+   - Cette approche est plus rapide à mettre en œuvre car vous n'avez pas besoin de créer des APIs supplémentaires.
+   - Cependant, cela pourrait entraîner une quantité plus importante de données transférées entre le serveur et le client si vous récupérez toutes les données à chaque fois, ce qui pourrait avoir un impact sur les performances si vous avez beaucoup de données.
+
+Le choix entre ces deux approches dépend de vos besoins spécifiques et de vos préférences en matière d'architecture. Si la gestion de l'historique est complexe avec des informations sensibles, il peut être préférable d'opter pour une approche côté backend. Si la gestion de l'historique est plus simple et que vous souhaitez gagner du temps dans le développement, une approche côté frontend en utilisant l'API Payment existante pourrait être plus adaptée.
+
+
+Bon pour le moment j'opte de le faire coté frontend et à l'avenir le faire peut-etre coté backend si des exigences se présentent
+
+--------------------historique-------------------(11/08/23)
+use node-cron
+Chaque le premier du mois recupére le mois actuele -1 et l'année (avec la condition si on est janvier de recupérer l'année -1)
+recupérer le solde actuelle (le calculer coté backend)
+
+Sur une autre requéte recupérer les subscribers payés et impayés du mois 
+recupérer chaque subscribers payés avec la condition de la validité(si validaté > date.now) avec le mois actuel 
+recuperer chaque subscribers non payés avec le mois actuel
+
+Lors de l"inscription recuperer la validité ainsi que le stauts
+Ainsi lors d'un paiement on va recupére ces derniers 
+
+Pour le filtrage :
+Filtrer les scribers selon le stauts (payer ou impayer) et changé le statut selon la date de validité  (node-(scron )
+
+
+essayez les élements selon les heures et les jours pour tester les fonctionnalités 
+
+Intégration Figma 
+1.Creer les fichiers de base (html, css et js) et les liées 
+2.Importer les modules nécessaires (pluggins, icons, font, etc..)
+3.Définir les couleurs sur le css et importer les imgs et icons 
+4.Définir les template html et puis importer le css
+
+----------------06/11/23----------------------
+nouvelles Taches 
+
+1/ Gestion des roles et accès 
+   Niveau 1 : Local
+   Niveau 2 : régional
+   NIveau 3 : National
+   Niveau 4 : Admin
+
+2/ Soumission Git et déploiement
+3/ Gestionndes validité
+4/ Cartographie (marqué un nouvel abonné)
+5/ Gestion des abonnés (statut(abonnés invalides))
+6/ Gestion des paiements (payer ou pas)
+7/ Application Saas
+8/ Modofier le mot de passe et suggestion de mot de passe par défaut 
+
+Documentation helmet : https://blog.logrocket.com/using-helmet-node-js-secure-application/#what-helmet
+----------------09/11/23---------------------
+

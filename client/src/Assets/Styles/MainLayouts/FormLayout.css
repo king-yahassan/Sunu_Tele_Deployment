@@ -1,0 +1,38 @@
+.form-layout{
+    /* left: 10%; */
+    top: 12%;
+
+}
+
+.form-layout .form-display{
+    display: flex;
+    margin: 1% 11%;
+}
+.form-layout .form-display div {
+    margin: 0 2% ;
+}
+
+
+.form-layout .input{
+    width: 400px;
+    height: 50px;
+
+}
+
+.validated{
+    width: 60%;
+    height: 60px;
+    border: none;
+    margin: 0.5% 35%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); /* x, y, flou, couleur */
+    border-radius: 5px;
+
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 900;
+}
+.validated:hover{
+    color: #fff;
+    background: #14FF00;
+}

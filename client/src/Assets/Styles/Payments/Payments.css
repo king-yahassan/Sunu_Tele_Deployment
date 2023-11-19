@@ -1,0 +1,64 @@
+.wrapper-payments{
+    width: 90%;
+    height: auto;
+    margin: 5%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #137C8B 67.53%, rgba(255, 255, 255, 0.17) 99.98%, rgba(217, 217, 217, 0.00) 99.99%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+.navbar-payments{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-payments h1{
+    padding: 4%;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+.link-payments{
+    width: 40%;
+    text-decoration: none;
+}
+/* .navbar-payments h1:hover{
+    background: #344D59;
+    color: white;
+} */
+.navbar-payments .active-button{
+    background: #344D59;
+    color: white;
+}
+.navbar-payments .inactive-button{
+    background: #fff;
+    color: #344D59;
+}
+
+
+/* mini nav bar from all payments  */
+.all-payments .payments-items{
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-size: 20px;
+}
+.all-payments .payments-items h4{
+    padding: 0.5%;
+    width: 14%;
+    background: linear-gradient(180deg, #fff 5.53%, rgba(255, 255, 255, 0.17) 99.98%, rgb(255, 255, 255) 79.99%,  #137C8B 100%);
+
+}
+.all-payments .payments-items p{
+    color: #fff;
+    width: 14%;
+    background: linear-gradient(180deg, #709CA7 0%, rgba(112, 156, 167, 0.00) 100%);
+
+}
+
+
+
+
+/* Ended style form all payments */

@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.landing-page {
+    font-family: 'Source Serif 4', serif;
+    
+
+    position: relative;
+    /* left: -0.6%; */
+    /* width: 100%; */
+    height: 740px;
+    background: #137C8B;
+    color: var(--blanc, #FFF);
+    text-align: center;
+
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 80px;
+    margin : 0 9% ;
+    width: 84%;
+    align-items: center;
+}
+.bloc-home{
+    width: 45%;
+    flex-shrink: 0;
+    height: 500px;
+}
+
+.title-home{
+    font-size: 65px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1px;
+}
+.about-us-home{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.description-home{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+}
+.btn{
+    width: 100%;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: linear-gradient(92deg, #344D59 52.03%, rgba(243, 243, 243, 0.00) 114.84%);
+}
+.btn a{
+    color: var(--blanc, #FFF);
+    font-family: Source Serif Pro;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+.right img{
+    width: 100%;
+    height: 500px;
+}
+
+/* Lading PAge */
+/* .LayoutLandingAndHomePage{
+    position: relative;
+    top: 90px;
+} */
