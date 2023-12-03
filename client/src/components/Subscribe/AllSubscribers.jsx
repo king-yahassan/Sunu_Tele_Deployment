@@ -19,15 +19,22 @@ const AllSubscribers = () => {
     // console.log(InverseSubscribers);
     //deleted subscriber
     async function deleteSubscriber(id) {
-        await Instance.delete(`${config.api_url}/removeSubscriber/${id}`)
-            .then((res) => {
-                return res;
-            })
-            .catch((error) => {
+        // Affichage de la boîte de dialogue de confirmation
+        var confirmation = confirm("Voulez-vous vraiment supprimer cet Abonné ?");
+    
+        if (confirmation) {
+            try {
+                await Instance.delete(`${config.api_url}/removeSubscriber/${id}`);
+                console.log("Élément supprimé !");
+                window.location.reload();
+            } catch (error) {
                 console.log(error);
-            });
-        window.location.reload();
+            }
+        } else {
+            console.log("Suppression annulée");
+        }
     }
+    
 
     return (
         <div className="all-subscribers">
@@ -49,8 +56,8 @@ const AllSubscribers = () => {
                                 <li>Adresse</li>
                                 <li>Téléphone</li>
                                 <li>Mensualité</li>
-                                <li>Coordonnées <br /> X</li>
-                                <li>Coordonnées <br /> Y</li>
+                                {/* <li>Coordonnées <br /> X</li>
+                                <li>Coordonnées <br /> Y</li> */}
                             </ul>
                             <p> Actions</p>
                         </div>
@@ -67,8 +74,8 @@ const AllSubscribers = () => {
                                         <p className="Subscribers-items-details">{subscriber.address}</p>
                                         <p className="Subscribers-items-details">{subscriber.phoneNumber}</p>
                                         <p className="Subscribers-items-details">{subscriber.paymentPriceSubscribe}XOF</p>
-                                        <p className="Subscribers-items-details">{subscriber.coordoneesX}</p>
-                                        <p className="Subscribers-items-details">{subscriber.coordoneesY}</p>
+                                        {/* <p className="Subscribers-items-details">{subscriber.coordoneesX}</p>
+                                        <p className="Subscribers-items-details">{subscriber.coordoneesY}</p> */}
                                     </div>
                                     <div className="actions">
                                         <Link

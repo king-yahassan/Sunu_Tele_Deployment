@@ -18,8 +18,6 @@ module.exports.newSubscriber = ( async (req, res) => {
             validity,
             numbersMonth,
             status,
-            coordoneesX,
-            coordoneesY,
             subscriberAdmin: subscriberAdminId, // Assigner l'ID de l'utilisateur connecté comme administrateur de l'abonné
             subscriberAdminName : subscriberAdminUser.pseudo 
         }); 
@@ -62,7 +60,7 @@ module.exports.singleSubscriberById = async (req, res) => {
 //Update Subscriber
 module.exports.updateSubscriber = async (req, res) => {
     try{
-    const { name, address, phoneNumber, paymentPriceSubscribe,coordoneesX,coordoneesY, status } = req.body;
+    const { name, address, phoneNumber,validity, paymentPriceSubscribe, status } = req.body;
     const updatedSubscriber = await Subscriber.findOneAndUpdate(
         { _id: req.params.id },
         {
@@ -70,8 +68,7 @@ module.exports.updateSubscriber = async (req, res) => {
                 name: name,
                 address: address,
                 phoneNumber : phoneNumber,
-                coordoneesX : coordoneesX,
-                coordoneesY : coordoneesY,
+                validity : validity ,
                 paymentPriceSubscribe: paymentPriceSubscribe,
                 // status : status
             }

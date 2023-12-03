@@ -18,7 +18,7 @@ const UpdateSubscriber = () => {
     });
 
     const { id } = useParams();
-    const { name, address, phoneNumber, paymentPriceSubscribe, status,coordoneesX,coordoneesY } = subscriber;
+    const { name, address, phoneNumber, paymentPriceSubscribe } = subscriber;
 
     // recupération du user
     const fetchData = async () => {
@@ -101,88 +101,15 @@ const UpdateSubscriber = () => {
                                         required={true}
                                     />
                                 </div>
-                                {/* <div>
-                                    <label htmlFor="numbersMonth">Nombre de mois à payer à l'avance</label>
-                                    <input
-                                        className="input"
-                                        type="number"
-                                        id="numbersMonth"
-                                        name="numbersMonth"
-                                        // value={data.pseudo}
-                                        // onChange={props.handleChange}
-                                        required
-                                    />
-                                </div> */}
+                                
                             </div>
-
-                            <div className="form-display">
-                                {/* <div>
-                                    <label htmlFor="pseudo">Droit d'inscripstion</label>
-                                    <input
-                                        className="input"
-                                        type="text"
-                                        id="pseudo"
-                                        name="pseudo"
-                                        // value={data.pseudo}
-                                        // onChange={props.handleChange}
-                                        required
-                                    />
-                                </div> */}
-                                {/* <div>
-                                    <label htmlFor="price"> Montant de  Mensualité</label>
-                                    <input
-                                        className="input"
-                                        value={paymentPriceSubscribe}
-                                        name="paymentPriceSubscribe"
-                                        type="text"
-                                        onChange={(e) => onInputChange(e)}
-                                        required={true}
-                                    />
-                                </div> */}
-
-                            </div>
-
-                            <div className="form-display">
-                                <div>
-                                    <label htmlFor="price">  Coordonnées Géographique en X (Latitude)</label>
-                                    <input
-                                        className="input"
-                                        value={coordoneesX}
-                                        name="coordoneesX"
-                                        type="text"
-                                        onChange={(e) => onInputChange(e)}
-                                        required={true}
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="price"> Coordonnées Géographique en Y (Longitude)</label>
-                                    <input
-                                        className="input"
-                                        value={coordoneesY}
-                                        name="coordoneesY"
-                                        type="text"
-                                        onChange={(e) => onInputChange(e)}
-                                        required={true}
-                                    />
-                                </div>
-                            </div>
-
                             <button type="submit" className="validated">Editer</button>
-                            {/* <button type="submit" className="validated">S'inscrire</button> */}
                         </form>
                     </div>
                 </div>
                 {error && <h1 style={{ color: "red" }}>{error.response.data.message}</h1>}
             </div>
 
-            {/* //              <input
-    //               value={status}
-    //               name="status"
-    //               type="text"
-    //               className="form-control"
-    //               onChange={(e) => onInputChange(e)}
-    //               required={true}
-    //             /> */}
         </>
 
     )

@@ -28,7 +28,7 @@ const mapData2 = [
               ],
               "type": "Polygon"
             }
-          }
+          } 
         ]
       },
     {

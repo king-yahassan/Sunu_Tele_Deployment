@@ -8,7 +8,7 @@ import show from "../../Assets/Imgs/icon-show.svg"
 function AllPayments() {
     const { payments } = useContext(DataContext);
     const [search, setSearch] = useState("")
-
+// console.log(payments);
     const formattedDate = (_date) => {
         const dateObject = new Date(_date);
         return dateObject.toLocaleDateString('fr-FR')

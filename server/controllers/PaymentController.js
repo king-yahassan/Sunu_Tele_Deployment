@@ -15,7 +15,7 @@ module.exports.newPayment = ( async (req, res) => {
     try {
         const payment = await Payment.create({
             date,
-            validateSubscribe,
+            validateSubscribe ,
             numbersMonth,
             // sum : numbersMonth * subscriberAuthor.paymentPriceSubscribe,
             subscriberAuthorId : subscriberAuthor.id,

@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 // import "../../Assets/Styles/MainLayouts/Connection.css"
 // import "../../Assets/Styles/MainLayouts/FormLayout.css"
 import logo from "../../Assets/Imgs/sunu-tele-logo.svg"
-import mapData from "../../Services/FriendsHouses.json"
+// import mapData from "../../Services/FriendsHouses.json"
 // import TestCarto from "../../Services/Auth/TestCarto"
-import mapData2 from "../../Services/Auth/TestCarto";
+// import mapData2 from "../../Services/Auth/TestCarto";
 
 function NewSubscriber() {
 
   
-  const [mapData_, setMapData_] = useState(mapData2); // Charger les données JSON ici
+  // const [mapData_, setMapData_] = useState(mapData2); // Charger les données JSON ici
   const [error, setError] = useState("");
   const [numbersMonth_, setNumbersMonth_] = useState("");
   const [subscriber, setSubscriber] = useState({
@@ -24,16 +24,15 @@ function NewSubscriber() {
     numbersMonth: numbersMonth_,
     status: "payer",
     validity: new Date(),
-    coordoneesX: "",
-    coordoneesY: "",
+
   });
-  const { name, address, phoneNumber,inscriptionRules, paymentPriceSubscribe, coordoneesX, coordoneesY } = subscriber;
+  const { name, address, phoneNumber,inscriptionRules, paymentPriceSubscribe } = subscriber;
 
   const onInputChange = (e) => {
     setSubscriber({ ...subscriber, [e.target.name]: e.target.value });
   };
-  // nombre de mois a payé plus gestion de la validité
 
+  // nombre de mois a payé plus la gestion de la validité
   const handleNumbersMonthChange = (e) => {
     const newNumbersMonth = e.target.value;
     const currentDate = new Date();
@@ -44,7 +43,6 @@ function NewSubscriber() {
     }
 
     setNumbersMonth_(newNumbersMonth);
-    // console.log(currentDate);
 
     setSubscriber({
       ...subscriber,
@@ -53,33 +51,6 @@ function NewSubscriber() {
     });
   };
 
-  // ****************************
-  // const addNewData = (newCoordinates) => {
-  //   const newFeature = {
-  //     type: "Feature",
-  //     properties: {},
-  //     geometry: {
-  //       coordinates: [newCoordinates],
-  //       type: "Polygon",
-  //     },
-  //   };
-  
-  //   setMapData_((prevMapData) => ({
-  //     ...prevMapData,
-  //     features: [...prevMapData.features, newFeature],
-  //   }));
-  // };
-// console.log(mapData_);
-// let nouveauTableau = []
-//   function ajouterElementAuTableau(tab, ele) {
-//     nouveauTableau = [...tab];
-  
-//     nouveauTableau.push(ele);
-//     console.log(nouveauTableau);
-
-//     // return nouveauTableau;
-//   }
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
@@ -96,28 +67,6 @@ function NewSubscriber() {
     }
   };
 
-// ******************************************** //
-
-// function Cartography() {
-
-//   const addNewData = (newData) => {
-//     setMapData_({
-//       ...mapData_,
-//       features: [...mapData_.features, newData],
-//     });
-//   };
-
-//   // ...
-// }
-
-// ******************************************** //
-
-
-
-
-
-  // lien vers le découpage 
-// https://geojson.io/#map=14.39/14.76109/-17.3688 
   return (
     <div className='main-content-form'>
       <div className="container-form">
@@ -204,55 +153,15 @@ function NewSubscriber() {
                   required={true}
                 />
               </div>
-
             </div>
-
-            {/* <div className="form-display"> */}
-            {/* <div style={{margin:"0 40%"}}> */}
-            {/* <div>
-                <label htmlFor="price">  Coordonnées Géographique en X (Latitude)</label>
-                <input
-                  className="input"
-                  value={coordoneesX}
-                  name="coordoneesX"
-                  type="text"
-                  onChange={(e) => onInputChange(e)}
-                  required={true}
-                />
-              </div>
-              <div>
-                <label htmlFor="price"> Coordonnées Géographique en Y (Longitude)</label>
-                <input
-                  className="input"
-                  value={coordoneesY}
-                  name="coordoneesY"
-                  type="text"
-                  onChange={(e) => onInputChange(e)}
-                  required={true}
-                />
-              </div>
-            </div> */}
-              {/* {console.log(coordoneesX)}
-              <button onClick={() => ajouterElementAuTableau(mapData_, coordoneesX)}>Test ajout</button> */}
             <button type="submit" className="validated">S'inscrire</button>
           </form>
-          {/* <button onClick={() => ajouterElementAuTableau(mapData_, coordoneesX)}>Test ajout</button> */}
         </div>
         {error && (
             <h1 style={{ color: "red" , position: "fixed", left:"10%",bottom: "10%" }}>{error.response.data.message}</h1>
           )}
       </div>
     </div>
-
-    //              <input
-    //               value={status}
-    //               name="status"
-    //               type="text"
-    //               className="form-control"
-    //               onChange={(e) => onInputChange(e)}
-    //               required={true}
-    //             />
-
   );
 }
 

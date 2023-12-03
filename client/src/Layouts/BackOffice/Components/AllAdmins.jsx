@@ -33,16 +33,33 @@ function AllAdmins() {
     }, []);
 
     //deleted admin
+    // async function deleteAdmin(id) {
+    //     await Instance.delete(`${config.api_url}/removeAdmin/${id}`)
+    //         .then((res) => {
+    //             return res;
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    //     window.location.reload();
+    // }
+
     async function deleteAdmin(id) {
-        await Instance.delete(`${config.api_url}/removeAdmin/${id}`)
-            .then((res) => {
-                return res;
-            })
-            .catch((error) => {
+        var confirmation = confirm("Voulez-vous vraiment supprimer cet Admin ?");
+    
+        if (confirmation) {
+            try {
+                await Instance.delete(`${config.api_url}/removeAdmin/${id}`)
+                window.location.reload();
+            } catch (error) {
                 console.log(error);
-            });
-        window.location.reload();
+            }
+        } else {
+            console.log("Suppression annulée");
+        }
     }
+    
+
     return (
         <div>
 

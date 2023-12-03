@@ -6,6 +6,7 @@ const Auth = require("../controllers/Auth")
 const Subscriber = require("../controllers/SubscriberController");
 const Admins = require("../controllers/AdminsController.JS");
 const Payment = require("../controllers/PaymentController")
+const geoDataController = require('../controllers/GeoDataController');
 
 
 //Authentification
@@ -36,6 +37,9 @@ router.get("/showPayment/:id" ,Payment.singlePaymentById)
 router.delete('/removeSubscriber/:id',AuthUser.authenticateAdminCompta,Payment.removePayment);
 router.get('/payments/groupedByDate', Payment.groupPaymentsByDate);
 
+//  données géospatiales
+router.post('/newCartography', geoDataController.createGeoData);
+router.get('/allCartography', geoDataController.getAllGeoData);
 
 // router.get("/showPayment/:id1/:id2" ,Payment.singlePaymentById)  
 // router.delete('/removeSubscriber/:id1/:id2',ComptaAdmin.authenticateAdminCompta,Payment.removePayment);

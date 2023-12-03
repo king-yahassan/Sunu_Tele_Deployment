@@ -65,4 +65,11 @@ const DataProvider = ({ children }) => {
   );
 };
 
+// API route 
+// { 
+//   "api_url" : "https://sunu-tele.onrender.com/api"
+// }
+
+
+
 export { DataContext, DataProvider };

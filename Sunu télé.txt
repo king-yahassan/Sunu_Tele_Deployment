@@ -82,7 +82,7 @@ nouvelles Taches
 5/ Gestion des abonnés (statut(abonnés invalides))
 6/ Gestion des paiements (payer ou pas)
 7/ Application Saas
-8/ Modofier le mot de passe et suggestion de mot de passe par défaut 
+8/ Modofier le mot de passe et suggestion de mot de passe par défaut et par google
 
 Documentation helmet : https://blog.logrocket.com/using-helmet-node-js-secure-application/#what-helmet
 ----------------09/11/23---------------------
