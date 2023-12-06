@@ -50,7 +50,7 @@ router.get('/allCartography', geoDataController.getAllGeoData);
 // router.get('/items/:id1/:id2', (req, res) => {
 //     const id1 = req.params.id1;
 //     const id2 = req.params.id2;
-  
+
 
 
 // test

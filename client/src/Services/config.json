@@ -1,3 +1,3 @@
 { 
-    "api_url" : "https://sunu-tele.onrender.com/api"
+    "api_url" : "http://localhost:5000/api"
 }

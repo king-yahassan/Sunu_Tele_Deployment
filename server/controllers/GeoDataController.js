@@ -1,4 +1,4 @@
-const GeoData = require('../models/geoData');
+const GeoData = require('../models/GeoData');
 
 // Créer de nouvelles données géospatiales
 const createGeoData = async (req, res) => {
